@@ -1,0 +1,3 @@
+(sym_lib_table
+  (lib (name "SuperSID-eagle-import")(type "KiCad")(uri "${KIPRJMOD}/SuperSID-eagle-import.kicad_sym")(options "")(descr ""))
+)
