@@ -1,47 +1,59 @@
-SuperSID
-========
+# supersid
 
-Cross-platform Sudden Ionospheric Disturbances (SID) monitor
+Sudden Ionospheric Disturbance detector from Stanford U. SuperSID project.
 
-Objectives
-----------
-Monitoring the Sudden Ionospheric Disturbances (SID) is an easy yet exciting Home Based Radio Astronomy Project. This project is an implementation of [Stanford SOLAR Center’s SuperSID][Standford].
+This project is based around Tom Hagen's SUPERSID amplifier circuit, a basic loop antenna, and a Raspberry Pi. 
 
-The default SuperSID project software runs on Windows OS to record the pre-amplified signal received by the antenna with a “SuperSID Monitor”. 
+## Synthesis
 
-This *SuperSID* project is an Open Source implementation that runs on Linux and Windows. The scripts are executable by Python 3.
+I am a very, very amateur astronomer with a love for radio astronomy that spans back to 1998 when I was a wee lad at Western Kentucky University.  While my background since then has been in mechanical engineering and manufacturing, I have always loved radio astronomy, the universe we float through, and learning as much as possible. 
 
-This *SuperSID* includes a text mode which allows to turn your Raspberry Pi into a SID monitor (tested on Raspbian Wheezy & Pidora distro). TkInter in the default GUI to ensure Python 3 compatibility.
+This project is to keep me entertained, and really nothing else :smile:.
 
+I came across the SuperSID project on the [SARA website](https://radio-astronomy.org/) and immediately fell in love with it because it gave me a chance to get my feet back into radio astronomy for as cheap as possible, and I could combine this with my newfound love of making and programing.
 
-|Original Project  |Open Source SuperSID Project
-|------------------|--------------------------------------
-|Desktop/Laptop PC |Desktop/Laptop PC/Raspberry Pi (512Mb)
-|Windows OS        |Linux and Windows OS
-|Python 2.7        |Python 3.3+
-|Any Soundcard     |USB External Soundcard
-|SuperSID Monitor pre-amp.  |Direct connection to External Soundcard
+### SIDs and Space Weather
 
-Other improvements
-------------------
+### How does it work?
 
-supersid.py:
- - More options in the [configuration file (.cfg)] (docs/ConfigHelp.md)
- - Continue recording after interruption
- - Auto adjustment of the interval period for better accuracy
- - New extended file format with time stamp to the 1.000th of second
- - *sidfile.py* can be used as a utility to manipulate SID files
+### Data and Interpretation
 
-![tkgui_screenshot01](https://cloud.githubusercontent.com/assets/5303792/9287125/7e65cb9c-4339-11e5-9f5b-4c740b8e8d21.png)
+### Goals
+1. Have fun with radio astronomy
+2. Learn how to build a functioning antenna and system from scratch
+3. Get a working, usable systrem
+4. Contribute what little I can to the scientific community
+5. Learn about low frequency radio astronomy and it's applications
 
-supersid_plot.py:
- - Accepts multiple files to display up to 10 days in continue (wildcards possible)
- - Can connect to NOAA to draw the day's events
- - Can send the graph as PDF by email
+## Hardware
 
-Example: `./supersid_plot.py -f ~/Data/DAISYSG_2015-07-03.csv --web`
+### Antenna
 
-![figure_20150703](https://cloud.githubusercontent.com/assets/5303792/9287076/5c4f3eb4-4337-11e5-9db7-00391b9fcf40.png)
+### SUPERSID Amp
 
-[Standford]: http://solar-center.stanford.edu/SID/sidmonitor/
+### Raspberry Pi
 
+## Software
+
+Using [sberl/supersid](https://github.com/sberl/supersid) as a base.
+
+## To Do
+
+Hardware
+- [x] Build antenna
+- [ ] Amp
+  - [x] Buy [components](https://github.com) and [board](https://github.com)
+  - [x] Assemble
+  - [ ] Debug
+- [x] Source [Raspberry PI](https://www.raspberrypi.com/products/raspberry-pi-3-model-a-plus/)
+- [x] Source [USB soundcard](https://www.amazon.com/gp/product/B00IRVQ0F8/ref=ppx_yo_dt_b_search_asin_title?ie=UTF8&psc=1)
+
+Software
+- [x] Setup Raspberry (Using Pi 3A+ cause it was here)
+- [x] Test [sberl/supersid](https://github.com/sberl/supersid) for basic functionality and learning
+- [ ] Upload to local database [see issue](https://github.com/nathanielbutts/supersid/issues/1#issue-1292526684)
+- [ ] Finalize this repo on the Pi
+
+## Special Notes
+
+## Links
