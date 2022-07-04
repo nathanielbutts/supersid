@@ -1,0 +1,161 @@
+# This is a comment with a hash.
+; This is another comment with a semicolon.
+# Comments are added only for demonstration purpose.
+
+
+[PARAMETERS]
+# viewer = tk
+viewer = text
+site_name = EXAMPLE
+monitor_id = SAMPLE1
+contact = nathaniel.butts@gmail.com
+
+# coordinates of your station, Bowling Green, KY
+longitude = 36.918682
+latitude = -86.436348
+utc_offset = -06:00
+time_zone = CST
+
+audio_sampling_rate = 96000
+
+log_interval = 5
+log_format = supersid_extended
+log_type = filtered
+scaling_factor = 1.0
+
+# fixed y axis for the tk viewer (float value)
+psd_min = NaN
+psd_max = NaN
+psd_ticks = 0
+
+hourly_save = YES
+
+# data_path shall be an absolute path or a path relative to the supersid script folder
+data_path = ../Data
+
+paper_size = A3
+
+number_of_stations = 5
+
+# VLF station data is gathered from two sources:# https://www.mwlist.org/vlf.php
+# https://sidstation.loudet.org/stations-list-en.xhtml
+# In case of contradictions, sidstation.loudet.org is used.
+
+[STATION_1]
+# https://www.mwlist.org/vlf.php?kHz=24.80
+# https://sidstation.loudet.org/stations-list-en.xhtml 24800 = NLK
+# Oso Wash, Jim Creek, WA United States @+48.203487, -121.916827
+# 
+# 17,411 km
+# 24h
+call_sign = A1F3
+color = b
+frequency = 29700
+channel = 0
+
+[STATION_2]
+# https://www.mwlist.org/vlf.php?kHz=18.20
+# https://sidstation.loudet.org/stations-list-en.xhtml 18200 = VTX3
+# South Vijayanarayanam, India @+08.387015,+077.752762
+# https://www.luftlinie.org/Bowling-Green,KY,USA/08.387015,077.752762
+# 14706 km
+call_sign = JXN
+color = r
+frequency = 16400
+channel = 0
+
+[STATION_3]
+# https://www.mwlist.org/vlf.php?kHz=18.20
+# https://sidstation.loudet.org/stations-list-en.xhtml 18200 = VTX3
+# South Vijayanarayanam, India @+08.387015,+077.752762
+# https://www.luftlinie.org/51.478,-0.001/+08.387015,+077.752762
+# 8432 km
+call_sign = GBZ
+color = g
+frequency = 19600
+channel = 0
+
+#[STATION_4]
+# https://www.mwlist.org/vlf.php?kHz=18.20
+# https://sidstation.loudet.org/stations-list-en.xhtml 18200 = VTX3
+# South Vijayanarayanam, India @+08.387015,+077.752762
+# https://www.luftlinie.org/51.478,-0.001/+08.387015,+077.752762
+# 8432 km
+#call_sign = VTX1
+#color = c
+#frequency = 16300
+#channel = 0
+
+#[STATION_5]
+# https://www.mwlist.org/vlf.php?kHz=18.20
+# https://sidstation.loudet.org/stations-list-en.xhtml 18200 = VTX3
+# South Vijayanarayanam, India @+08.387015,+077.752762
+# https://www.luftlinie.org/51.478,-0.001/+08.387015,+077.752762
+# 8432 km
+#call_sign = GBZ
+#color = m
+#frequency = 19580
+#channel = 0
+
+[STATION_4]
+# https://www.mwlist.org/vlf.php?kHz=18.20
+# https://sidstation.loudet.org/stations-list-en.xhtml 18200 = VTX3
+# South Vijayanarayanam, India @+08.387015,+077.752762
+# https://www.luftlinie.org/51.478,-0.001/+08.387015,+077.752762
+# 8432 km
+call_sign = UNK
+color = y
+frequency = 13300
+channel = 0
+
+[STATION_5]
+call_sign = JJI
+color = r
+frequency = 20200
+channel = 0
+
+#[STATION_7]
+# https://www.mwlist.org/vlf.php?kHz=18.20
+# https://sidstation.loudet.org/stations-list-en.xhtml 18200 = VTX3
+# South Vijayanarayanam, India @+08.387015,+077.752762
+# https://www.luftlinie.org/51.478,-0.001/+08.387015,+077.752762
+# 8432 km
+#call_sign = NDT
+#color = m
+#frequency = 22200
+#channel = 0
+
+[Capture]
+# Linux example using alsaaudio
+Audio = alsaaudio
+Device = plughw:CARD=PCH,DEV=0
+Format = S32_LE
+PeriodSize = 1024
+Channels = 1
+
+# Windows example using either sounddevice or pyaudio
+# Audio = sounddevice
+# Audio = pyaudio
+# Device = Windows WASAPI: Mikrofon (Realtek High Definition Audio)
+# Format = S32_LE
+# Channels = 1
+
+[FTP]
+automatic_upload = no
+ftp_server = sid-ftp.stanford.edu
+ftp_directory = /incoming/SuperSID/NEW/
+# local_tmp shall be an absolute path or a path relative to the supersid script folder
+local_tmp = ../outgoing
+call_signs = NWC
+
+[Email]
+# required to connect to the mail server when using 'supersid_plot.py -e receiver@domain.tld'
+from_mail = you@domain.tld
+email_server = mail.domain.tld
+email_port = 587
+email_tls = yes
+email_login = your_user_name
+email_password = your_password
+
+# email_server for gmail would be smtp.gmail.com  
+# email_port for gmail would be 587  
