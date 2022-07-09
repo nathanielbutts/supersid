@@ -41,10 +41,10 @@ Using [sberl/supersid](https://github.com/sberl/supersid) as a base.
 
 Hardware
 - [x] Build antenna
-- [ ] Amp
+- [x] Amp
   - [x] Buy [components](https://github.com) and [board](https://github.com)
   - [x] Assemble
-  - [ ] Debug
+  - [x] Debug
 - [x] Source [Raspberry PI](https://www.raspberrypi.com/products/raspberry-pi-3-model-a-plus/)
 - [x] Source [USB soundcard](https://www.amazon.com/gp/product/B00IRVQ0F8/ref=ppx_yo_dt_b_search_asin_title?ie=UTF8&psc=1)
 
